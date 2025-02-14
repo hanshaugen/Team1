@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: my-php-app
+  namespace: team1
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-app
+      app: my-php-app
   template:
     metadata:
       labels:
-        app: my-app
+        app: my-php-app
     spec:
       containers:
-      - name: my-app
-        image: nginx:latest
+      - name: my-php-app
+        image: fredriksacr.azurecr.io/my-php-app:latest
         ports:
         - containerPort: 80
