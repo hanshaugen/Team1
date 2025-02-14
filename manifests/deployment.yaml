@@ -18,3 +18,5 @@ spec:
         image: fredriksacr.azurecr.io/my-php-app:latest
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: acr-secret
