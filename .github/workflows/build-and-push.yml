@@ -26,5 +26,6 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
+        context: ./src  # Specify the correct context
         push: true
         tags: fredriksacr.azurecr.io/my-php-app:latest
