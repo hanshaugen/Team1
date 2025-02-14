@@ -6,7 +6,7 @@
 <body>
     <?php
     $name = htmlspecialchars($_POST['name']);
-    echo "Hello, $name!";
+    echo "Hello there, $name!";
     ?>
 </body>
 </html>
